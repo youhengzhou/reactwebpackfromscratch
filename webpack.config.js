@@ -1,10 +1,10 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index",
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, "/dist"), // output of compiled files
-    filename: "[name].bundle.js", // name of compiled files
+    filename: "[name].bundle.js",
   },
   mode: "development",
   devServer: {
@@ -13,6 +13,7 @@ module.exports = {
     open: true, // enable auto open browser
     hot: true, // enable Hot Module Replacement feature
   },
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
@@ -28,4 +29,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+    }),
+  ],
 };

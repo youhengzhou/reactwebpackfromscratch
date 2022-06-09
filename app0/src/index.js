@@ -1,10 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+window.app1Url = "http://localhost:3001";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+import("./bootstrap");

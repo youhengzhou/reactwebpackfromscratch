@@ -8,10 +8,11 @@
     ]
   },
   "scripts": {
-    "start": "lerna run --parallel start",
+    "start": "nodemon index.js",
     "build": "lerna run build"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "nodemon": "^2.0.16"
   }
 }

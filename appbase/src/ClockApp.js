@@ -1,12 +1,15 @@
 import React from "react";
-import "./App.css";
 import Clock from "./components/clock";
 import NotchClock from "./components/notchClock";
 
-const App = () => {
+const h1Style = {
+  color: "orange",
+};
+
+const ClockApp = () => {
   return (
     <div>
-      <h1> App 1: </h1>
+      <h1 style={h1Style}> App 1: </h1>
       <h1> The current time is: </h1>
       <h2> {new Date().toLocaleTimeString()} </h2>
       <h1>Clock:</h1>
@@ -21,4 +24,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ClockApp;
